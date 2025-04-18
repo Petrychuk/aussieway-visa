@@ -1,6 +1,6 @@
 backend:
-  ## name: git-gateway (Когда сайт на Netlify с включённой Identity + Git Gateway)
-  name: test-repo ## Когда ты тестируешь локально и не настроен GitHub
+  name: git-gateway ## (Когда сайт на Netlify с включённой Identity + Git Gateway)
+  ## name: test-repo ## Когда ты тестируешь локально и не настроен GitHub
   branch: main
 
 media_folder: "public/uploads"
