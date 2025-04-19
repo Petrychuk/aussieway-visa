@@ -1,0 +1,52 @@
+:root {
+  /* 🎨 Цвета */
+  --color-primary: #4dbabf;
+  --color-secondary: #4dbabf;
+  --color-accent: #00B4DC;
+  --color-text: #000000;
+  --color-white: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.05);
+  --color-glow: rgba(33, 88, 100, 0.2);
+  --color-background: #F5F5F5;
+  --color-primary-hover: #8cd2d5;
+  --color-link-hover: var(--color-primary);
+  --color-preloader-border: var(--color-primary);
+  --color-preloader-border-top: var(--color-white);
+
+  /* 📐 Размеры */
+  --header-height: 90px;
+  --container-max-width: 1280px;
+  --border-radius: 15px;
+  --border-radius-button: 15px;
+  --font-size-button: 16px;
+  --gap-desktop: 30px;
+  --gap-mobile: 10px;
+
+   /* 🔤 Шрифты */
+  --font-family-base: 'DM Sans', 'Inter', sans-serif;
+  --font-weight-light: 400;
+  --font-weight-normal: 500;
+  --font-weight-bold: 600;
+  --font-size-base: 16px;
+  --font-size-text: 15px;
+  --font-size-small: 13px;
+  --font-size-button: 16px;
+
+  /* 🔠 Заголовки */
+  --font-size-h1: 32px;
+  --font-size-h2: 30px;
+  --font-size-h3: 28px;
+  --font-size-h4: 26px;
+  --font-size-h5: 24px;
+  --font-size-h1-mobile: 26px;
+  --font-size-h2-mobile: 24px;
+  --font-size-h3-mobile: 22px;
+  --font-size-h4-mobile: 20px;
+  --font-size-h5-mobile: 18px;
+
+  /* ⚙️ Утилиты */
+  --transition-default: all 0.3s ease;
+  --z-index-preloader: 9999;
+  --z-index-back-to-top: 996;
+}
+
