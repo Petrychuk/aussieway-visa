@@ -1,4 +1,4 @@
-import Wrapper from '@/components/common/Wrapper';
+//import Wrapper from '@/components/common/Wrapper';
 //import Intro from '@/components/layout/Intro';
 //import ServicesLinks from '@/components/layout/ServicesLinks';
 //import MeetAndre from '@/components/layout/MeetAndre';

@@ -1,5 +1,3 @@
-@import '../base/variables.css';
-
 .header {
   background: var(--color-white);
   height: var(--header-height);
