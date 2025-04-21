@@ -1,21 +1,18 @@
-//import Wrapper from '@/components/common/Wrapper';
-//import Intro from '@/components/layout/Intro';
-//import ServicesLinks from '@/components/layout/ServicesLinks';
-//import MeetAndre from '@/components/layout/MeetAndre';
-//import InfoBlocks from '@/components/layout/InfoBlocks';
-import Header from '@/components/common/Header';
+// pages/index.js
+import Intro from '@/components/common/Intro';
+import { getIntroContent } from '@/lib/markdown';
 
-export default function HomePage() {
+export default function HomePage({ intro }) {
   return (
     <>
-      <Header />
-      {/* <Intro /> */}
-      <main>
-        {/* <ServicesLinks /> */}
-        {/* <MeetAndre /> */}
-        {/* <InfoBlocks /> */}
-      </main>
-      
+      <Intro {...intro} />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const intro = await getIntroContent('home');
+  return {
+    props: { intro },
+  };
 }

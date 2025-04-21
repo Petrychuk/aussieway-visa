@@ -1,4 +1,5 @@
 // components/common/Checkmark.js
+
 export default function Checkmark({ visible }) {
   return (
     <svg
@@ -16,7 +17,7 @@ export default function Checkmark({ visible }) {
         transition: 'stroke-dashoffset 0.4s ease',
       }}
     >
-      {/* Плавная S-образная галочка */}
+      {/* Главная S-образная галочка */}
       <path d="M5 13 Q9 18 12 15 Q16 10 22 5" />
     </svg>
   );

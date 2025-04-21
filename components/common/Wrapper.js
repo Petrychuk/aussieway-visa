@@ -1,13 +1,14 @@
-// components/layout/Wrapper.js
-import Header from './Header';
-import Footer from './Footer';
+// components/common/Wrapper.js
+import Header from '@/components/common/Header';
+//import Footer from '@/components/common/Footer';
 
 export default function Wrapper({ children }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
-      <Footer />
+      <main className="wrapper">{children}</main>
+      {/* <Footer /> */}
     </>
   );
 }
+

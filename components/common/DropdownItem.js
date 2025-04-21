@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from '@/styles/layout/header.module.css';
-import Checkmark from './Checkmark';
+import Checkmark from '@/components/common/Checkmark';
 import { useState } from 'react';
 
 export default function DropdownItem({ href, label }) {
