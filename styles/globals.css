@@ -1,10 +1,11 @@
 @import './base/variables.css';
 
-
 .wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
   width: 100%;
+  max-width: 1280px; 
+  margin: 0 auto;
+  padding: 0 16px; /* чтобы не липло к краям на мобилке */
+  box-sizing: border-box;
 }
 
 main {

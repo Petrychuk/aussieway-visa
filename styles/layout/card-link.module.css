@@ -1,0 +1,96 @@
+.cardLink {
+  position: relative;
+  display: block;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 222px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* мягкая тень */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  text-decoration: none;
+  transform: perspective(1000px);
+}
+
+.cardLink:hover {
+  transform: scale(0.98); /* эффект параллакса уменьшения */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* усиливаем тень */
+}
+
+.cardLink:hover .labelWrapper {
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold); /* чуть жирнее */
+}
+
+.labelWrapper {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 8px;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 90%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+}
+
+.labelWrapper::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--color-text);
+  background-color: var(--color-white);
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  position: relative;
+}
+
+.cardLink:hover .labelWrapper::before {
+  background-color: var(--color-white);
+  animation: drawCheck 0.4s ease forwards;
+  border: 2px solid var(--color-primary);
+}
+
+@keyframes drawCheck {
+  0% {
+    background-image: none;
+  }
+  100% {
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%2300B4DC' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 13 L9 18 L20 6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
+  }
+}
+
+.active .cardLink {
+  transform: scale(0.98);
+  border: 1px solid var(--color-primary);
+}
+
+
+.active .labelWrapper::before {
+  background-color: var(--color-accent);
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 13 L9 18 L20 6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 22px;
+}
+
+@media (max-width: 768px) {
+  .cardLink {
+    margin-bottom: 5px;
+  }
+}

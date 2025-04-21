@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import styles from '@/styles/layout/header.module.css';
-import DropdownItem from '@/components/common/DropdownItem';
+import DropdownItem from '@/components/buttons/DropdownItem';
 
 export default function Header() {
   const [showDropdown, setShowDropdown] = useState(false);

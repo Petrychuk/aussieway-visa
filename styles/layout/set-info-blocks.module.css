@@ -1,0 +1,19 @@
+.section {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,31 @@
+.servicesLinks {
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px var(--color-primary);
+  background-color: var(--color-secondary);
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

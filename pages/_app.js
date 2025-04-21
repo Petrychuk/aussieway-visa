@@ -1,6 +1,6 @@
 // pages/_app.js
 import '@/styles/globals.css';
-import Wrapper from '@/components/common/Wrapper';
+import Wrapper from '@/components/layout/Wrapper';
 
 export default function App({ Component, pageProps }) {
   return (
