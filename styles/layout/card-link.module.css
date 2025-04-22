@@ -91,6 +91,21 @@
 
 @media (max-width: 768px) {
   .cardLink {
+    width: 100%;              /* ✅ чтобы карточка занимала 100% от grid-ячейки */
+    height: auto;             /* ✅ адаптивная высота */
+    aspect-ratio: 1 / 1;      /* ✅ квадратная форма */
     margin-bottom: 5px;
+  }
+
+  .labelWrapper {
+    font-size: 12px;
+    padding: 6px;
+    top: 8px;
+    width: 90%;
+  }
+
+  .labelWrapper::before {
+    width: 16px;
+    height: 16px;
   }
 }

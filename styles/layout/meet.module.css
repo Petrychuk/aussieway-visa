@@ -5,11 +5,11 @@
   background-color: var(--color-white);
   border-radius: 12px;
   box-shadow: var(--color-shadow);
-  padding: 20px;
+  padding:  0 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .title {
@@ -32,9 +32,9 @@
 
 .text {
   flex: 1;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-text);
   color: var(--color-accent);
-  line-height: 1.6;
+  line-height: 1.4;
   margin-top: 0;
   padding-left: 10px;
 }
@@ -67,5 +67,14 @@
 
   .photo {
     width: 100px;
+  }
+
+  .title {
+    font-size: var(--font-size-h2-mobile);
+    margin-top: 10px;
+  }
+
+  .text {
+    padding-top: 0;
   }
 }

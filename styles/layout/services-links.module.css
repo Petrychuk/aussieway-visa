@@ -9,23 +9,24 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
-
+/* Планшеты */
 @media (max-width: 1024px) {
   .grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Смартфоны */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr); /* ✅ 2 карточки в ряд */
+    gap: 5px;
   }
+  .servicesLinks {
+    margin-top: 150px;
+  }
+
 }
 
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
