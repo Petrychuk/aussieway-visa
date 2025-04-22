@@ -9,12 +9,13 @@
   font-size: var(--font-size-h3);
   font-weight: 800;
   background-color: var(--color-tried);
-  border-radius: 10px;
+  border-radius: 5px;
   display: inline-block;
   text-transform: uppercase;
   width: 90%;
   margin-bottom: 15px;
   margin-top: 0;
+  padding-right: 10px;
 }
 
 .text {

@@ -1,7 +1,7 @@
 import TwoColumn from '@/components/layout/TwoColumn';
 import Intro from '@/components/sections/Intro';
 import { getIntroContent } from '@/lib/markdown';
-import ServicesCardLinks from '@/components/sections/SeervicesCardLinks';
+import ServicesCardLinks from '@/components/sections/ServicesCardLinks';
 import SetInfoBlocks from '@/components/sections/SetInfoBlocks';
 import Meet from '@/components/sections/Meet';
 

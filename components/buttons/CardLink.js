@@ -1,17 +1,17 @@
+import { useRouter } from 'next/router';
 import styles from '@/styles/layout/card-link.module.css';
-import Link from 'next/link';
 
-export default function CardLink({ title, image, href, isActive = false }) {
+export default function CardLink({ title, image, href }) {
+  const router = useRouter();
+  const isActive = router.pathname === href;
+
   return (
-    <Link
+    <a
       href={href}
-      className={`${styles.cardLink} ${isActive ? 'active' : ''}`}
+      className={`${styles.cardLink} ${isActive ? styles.active : ''}`}
       style={{ backgroundImage: `url(${image})` }}
     >
-      <span className={styles.labelWrapper}>
-        <span className={styles.checkmark}></span>
-        {title}
-      </span>
-    </Link>
+      <div className={styles.labelWrapper}>{title}</div>
+    </a>
   );
 }
