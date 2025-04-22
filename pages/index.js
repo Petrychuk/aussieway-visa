@@ -1,8 +1,9 @@
 import TwoColumn from '@/components/layout/TwoColumn';
 import Intro from '@/components/sections/Intro';
 import { getIntroContent } from '@/lib/markdown';
-import SeervicesCardLinks from '@/components/sections/SeervicesCardLinks';
+import ServicesCardLinks from '@/components/sections/SeervicesCardLinks';
 import SetInfoBlocks from '@/components/sections/SetInfoBlocks';
+import Meet from '@/components/sections/Meet';
 
 export default function HomePage({ intro }) {
   return (
@@ -10,7 +11,12 @@ export default function HomePage({ intro }) {
       <Intro {...intro} />
 
       <TwoColumn
-        left={<SeervicesCardLinks />}
+        left={
+        <>
+          <ServicesCardLinks />
+          <Meet />
+        </>
+        }
         right={<SetInfoBlocks />}
       />
     </>

@@ -1,0 +1,71 @@
+/* meet.module.css */
+
+.meetBlock {
+  
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: var(--color-shadow);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-header);
+  width: 98%;
+  background-color: var(--color-tried);
+  padding: 6px 12px;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.text {
+  flex: 1;
+  font-size: var(--font-size-base);
+  color: var(--color-accent);
+  line-height: 1.6;
+  margin-top: 0;
+  padding-left: 10px;
+}
+
+.photo {
+  flex-shrink: 0;
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.link {
+  color: var(--color-accenty);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo {
+    width: 100px;
+  }
+}
