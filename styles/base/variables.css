@@ -29,6 +29,7 @@
   --font-weight-normal: 500;
   --font-weight-bold: 600;
   --font-weight-header: 800;
+  --font-size-menu: 20px;
   --font-size-base: 16px;
   --font-size-text: 15px;
   --font-size-small: 13px;
@@ -40,12 +41,11 @@
   --font-size-h3: 28px;
   --font-size-h4: 26px;
   --font-size-h5: 24px;
-  --font-size-text: 16px;
-  --font-size-h1-mobile: 26px;
-  --font-size-h2-mobile: 24px;
-  --font-size-h3-mobile: 22px;
-  --font-size-h4-mobile: 20px;
-  --font-size-h5-mobile: 18px;
+  --font-size-h1-mobile: 24px;
+  --font-size-h2-mobile: 22px;
+  --font-size-h3-mobile: 20px;
+  --font-size-h4-mobile: 18px;
+  --font-size-h5-mobile: 16px;
   --font-size-text-mobile: 14px;
 
   /* ⚙️ Утилиты */

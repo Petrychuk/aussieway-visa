@@ -10,9 +10,12 @@
   z-index: 1000;
   margin-bottom: 0; /* если был отступ */
   padding-bottom: 0;
+  padding-left: 15px;
+  
 }
 
 .container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,6 +24,7 @@
   max-width: var(--container-max-width);
   margin: 0 auto;
   gap: var(--gap-desktop);
+  box-sizing: border-box;
 }
 
 .logo {
@@ -30,8 +34,8 @@
 
 .logoWrapper {
   position: relative;
-  width: 300px;
-  height: 140px;
+  width: 180px;
+  height: 90px;
 }
 
 .logoImg {
@@ -45,10 +49,9 @@
 }
 
 .trailDecor {
-  position: absolute;
-  bottom: 25px;
-  left: 240px;
-  width: 180px;
+  position: absolute;  
+  left: 180px;
+  width: 200px;
   height: auto;
   z-index: 0;
   opacity: 0.6;
@@ -58,7 +61,15 @@
 .nav {
   display: flex;
   justify-content: center;
-  font-weight: 600;
+  font-size: var(--font-size-menu);
+  font-weight: var(--font-weight-header);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-desktop);
 }
 
 .menu {
@@ -128,6 +139,7 @@
   align-items: center;
   justify-content: center;
   margin-left: auto;
+  margin-right: 45px;
 }
 
 .button {
@@ -202,6 +214,7 @@
 
 /* 🔽 Responsive (Tablet & Mobile) */
 @media (max-width: 991px) {
+  
   .container {
     justify-content: space-between;
     padding: 10px;
@@ -273,6 +286,7 @@
     padding: 20px;
     display: none;
     z-index: 1000;
+    text-align: center; 
   }
 
   .nav.active {
@@ -283,8 +297,8 @@
     flex-direction: column;
     gap: var(--gap-mobile);
     width: 100%;
-    padding-left: 20px; 
-    align-items: flex-start; 
+    padding: 0; 
+    align-items: center;
   }
 
   @keyframes slideDown {
@@ -352,5 +366,8 @@
 @media (max-width: 991px) {
   .burger {
     display: flex;
+  }
+  .header {
+    padding-left: 0;
   }
 }

@@ -30,7 +30,7 @@ export default function Header() {
             <Link href="/" className={styles.logo} aria-label="Go to homepage">
               <div className={styles.logoWrapper}>
                 <Image
-                  src="/img/logo/Visa_Australia_Online.png"
+                  src="/img/logo/Logo_cropped.jpg"
                   alt="Visa Australia Online"
                   fill
                   className={styles.logoImg}

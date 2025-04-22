@@ -1,8 +1,8 @@
 .introSection {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 0;
-  margin-bottom: -5px;
+  margin-top: -10px;
+  margin-bottom: 5px;
   padding-top: var(--header-height);
 }
 
@@ -10,45 +10,68 @@
   flex: 0 0 60%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 12px;
+  justify-content: center;  
   box-sizing: border-box;
 }
 
 .introHeaderWrapper {
-  background-color: #b9f2ff;
-  padding: 20px;
+  background-color: var(--color-secondary);
   display: flex;
   align-items: center;
-  width: 100%;
-  margin-bottom: 20px;
+  font-size: var(--font-size-h1);
+  width: calc(100% + 10%);
+  margin-right: -10%;
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle {
+  background-color: var(--color-tried);
+  font-size: var(--font-size-h2);
+  padding-left: 10px;
+  font-weight: var(--font-weight-header);
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .coloredWord {
-  color: #00B4DC;
+  color: var(--color-accent);
 }
 
 .introCard {
-  background-color: var(--color-background);
-  margin-left: 30px;
-  padding: 20px 20px 20px 10px;
-  border-radius: 10px;
+  background-color: var(--color-white);
+  margin-top: 0;
+  box-shadow: var(--color-shadow);
+  padding-left: 10px;
+  margin-right: 20px;
 }
 
 .textBlock {
   background-color: #ffffff;
-  padding: 10px 30px;
-  border-radius: 10px;
+  padding: 0 20px;
   margin-top: 10px;
   text-align: left;
 }
 
+/* Общая голубая плашка */
+.backgroundOverlay {
+  margin-left: 10px;
+  height: 100%; /* Высота плашки */
+  background-color: var(--color-tried);
+  z-index: 1;
+  padding: 0 20px;
+  margin-top: 0;
+  margin-bottom: 0; 
+}
+
 .introImageWrapper {
   flex: 0 0 40%;
-  padding: 0 12px;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start; /* прижимаем вверх */
+  justify-content: flex-start;
   box-sizing: border-box;
 }
 
@@ -56,39 +79,48 @@
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
+  object-fit: cover;
 }
 
 /* Responsive layout */
 @media (max-width: 767px) {
   .introSection {
     flex-direction: column;
-    margin-top: 10px;
-  }
-
-  .introContent, .introImageWrapper {
-    flex: 0 0 100%;
-    padding: 0 12px;
+    margin-top: -10px;
+    margin-bottom: 0;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 
   .introHeaderWrapper {
     width: 100%;
-    margin-top: 67px;
+    margin-top: 0;
+    margin-right: 0;
+    font-size: var(--font-size-h1-mobile);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-h3-mobile);
+    margin: 8px 0 0 0;
+    padding-left: 0;
   }
 
   .introCard {
-    margin-left: 30px;
-    padding: 10px 20px 10px 10px;
-    background-color: #e5faff;
+    background-color: #ffffff;
+    box-shadow: none;
+    padding: 10px 16px;
+    margin: 0;
   }
 
   .textBlock {
-    width: 100%;
-    padding: 10px 25px;
-    text-align: left;
+    padding: 0;
+    margin-top: 12px;
   }
 
-  .textBlock p {
-    text-align: left;
+  .introImage {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
   }
 }
+
