@@ -1,0 +1,85 @@
+.sliderWrapper {
+  padding: 0;
+  background: #0b0025; 
+  position: relative;
+}
+
+.swiper {
+  
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.slide {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  filter: grayscale(60%);
+  transition: all 0.4s ease;
+}
+
+.slide.active {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+  z-index: 2;
+}
+
+.content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 20px;
+  max-width: 60%;
+  border-radius: 10px;
+}
+
+.content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  width: 45px;
+  height: 45px;
+  background-color: #c0bbc9;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-prev-custom {
+  left: -50px;
+  background-image: url('/img/icons/left-arrow-svgrepo-com.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+
+.swiper-button-next-custom {
+  right: -50px;
+  background-image: url('/img/icons/right-arrow-svgrepo-com.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}

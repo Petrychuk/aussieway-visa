@@ -11,7 +11,7 @@
   --color-background: #F5F5F5;
   --color-primary-hover: #8cd2d5;
   --color-link-hover: var(--color-primary);
-  --color-preloader-border: var(--color-primary);
+  --color-peloader-border: var(--color-primary);
   --color-preloader-border-top: var(--color-white);
 
   /* 📐 Размеры */

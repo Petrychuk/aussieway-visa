@@ -1,0 +1,102 @@
+.sliderWrapper {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--color-shadow);
+}
+/* .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);  полупрозрачный фильтр 
+} */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  bottom: 60px;
+  left: 30px;
+  max-width: 500px;
+  background-color: rgba(29, 34, 36, 0.5); 
+  color:var(--color-primary);
+  padding: 10px;
+  border-radius: 12px;
+  z-index: 2;
+  font-weight: var(--font-weight-bold);
+}
+
+.content h3 { 
+  font-size: var(--font-size-h3);
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.content p {
+  font-size: var(--font-size-text);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.button {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #f4f4f4;
+}
+
+.controlsBottom {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.navBtn {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.7);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.prev-btn {
+  background-image: url('/img/icons/left-arrow-svgrepo-com.svg');
+  background-color: var(--color-primary);
+}
+
+.next-btn {
+  background-image: url('/img/icons/right-arrow-svgrepo-com.svg');
+}

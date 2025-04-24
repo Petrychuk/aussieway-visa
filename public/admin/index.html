@@ -6,21 +6,25 @@
     <title>AussieWay Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 
 <body>
     <script>
         window.CMS_MANUAL_INIT = true;
     </script>
+
+    <!-- Загружаем CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <!-- Инициализация строго после полной загрузки DOM -->
     <script>
-        if (window.CMS) {
-            window.CMS.init();
-        } else {
-            window.addEventListener("DOMContentLoaded", () => {
-                if (window.CMS) window.CMS.init();
-            });
-        }
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.CMS) {
+                window.CMS.init();
+            } else {
+                console.error('CMS is not defined');
+            }
+        });
     </script>
 </body>
 
