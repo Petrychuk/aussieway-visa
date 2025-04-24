@@ -2,14 +2,14 @@
 import Intro from '@/components/sections/Intro';
 import { getIntroContent, getSliderPosts } from '@/lib/markdown';
 import HeroSlider from '@/components/sections/SliderHero';
-// import Slider from '@/components/sections/Slider';
+import SubscribeBlock from '@/components/sections/SubscribeBlock';
 
-export default function SkillVisasPage({ intro, slides }) {
+export default function VisaNewsPage({ intro, slides }) {
   return (
     <>
       <Intro {...intro} />
-      {/* <Slider slides={slides} /> */}
       <HeroSlider slides={slides} />
+      <SubscribeBlock />
     </>
   );
 }
