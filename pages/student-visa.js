@@ -30,8 +30,8 @@ export default function StudentVisasPage({ intro, detailsHtml }) {
 }
 
 export async function getStaticProps() {
-  const intro = await getIntroContent('family-visa');
-  const detailsHtml = await getVisaDetails('family_visa_details');
+  const intro = await getIntroContent('student-visa');
+  const detailsHtml = await getVisaDetails('student_visa_details');
 
   return {
     props: {
