@@ -1,0 +1,14 @@
+/* Styles for VisaNewsPage grid */
+
+.gridWrapper {
+  padding: 20px 10px;
+  background: #f9f9f9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
