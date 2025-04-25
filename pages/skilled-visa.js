@@ -24,7 +24,7 @@ export default function SkillVisasPage({ intro, detailsHtml }) {
 }
 
 export async function getStaticProps() {
-  const intro = await getIntroContent('skilled_visa');
+  const intro = await getIntroContent('skilled-visa');
   const detailsHtml = await getVisaDetails('skilled_visa_details');
 
   return {

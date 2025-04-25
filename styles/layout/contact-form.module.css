@@ -1,0 +1,113 @@
+/* styles/layout/contact-form.module.css */
+
+.form {
+  background: #daf1f7;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.form h3 {
+text-align: center;
+margin-bottom: 10px;
+margin-top: 0;
+
+}
+
+.form p {
+  align-items: center;
+  width: 90%;
+  line-height: 1.1;
+  padding-left: 20px;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 94%;
+  margin-left: 10px;
+}
+
+.input,
+.textarea {
+  flex: 1;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 90%;
+}
+
+.button {
+  background: #4dbabf;
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-button);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background: #2f9c9f;
+}
+
+.error {
+  color: #dc3545;
+  font-size: var(--font-size-small);
+  padding-top: 0;
+}
+
+.success {
+  color: #28a745;
+  margin-top: 10px;
+}
+
+/* 🌐 Адаптивность для планшетов (до 991px) */
+@media (max-width: 991px) {
+
+
+  .row {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .input,
+  .textarea {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
+
+/* 📱 Адаптивность для мобильных (до 575px) */
+@media (max-width: 575px) {
+  .form {
+    border-radius: 0;
+    padding: 15px 10px;
+    margin: 0;
+  }
+
+  .form p {
+    font-size: 14px;
+    line-height: 1.4;
+    padding-left: 0;
+  }
+
+  .button {
+    width: 50%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+   .input,
+  .textarea {
+    width: 90%;
+    margin: 8px 0;
+  }
+}
