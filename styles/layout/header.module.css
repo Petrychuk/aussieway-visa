@@ -59,18 +59,18 @@
 }
 
 .nav {
-  display: flex;
-  justify-content: center;
-  font-size: var(--font-size-menu);
-  font-weight: var(--font-weight-header);
   position: absolute;
-  left: 50%;
+  left: 48%; /* было 50% */
   top: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
+  font-size: var(--font-size-menu);
+  font-weight: var(--font-weight-header);
   gap: var(--gap-desktop);
+  white-space: nowrap; 
 }
+
 
 .menu {
   display: flex;
