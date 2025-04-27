@@ -12,16 +12,16 @@ export default function FamilyVisasPage({ intro, detailsHtml }) {
       <Intro {...intro} />
       <TwoColumn
         left={
-        
-        <VisasTypeCard />        
-            
+            <>
+            <VisasTypeCard />        
+            <MoreDetailsBlock href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing" />   
+            </>
         }
         right=
              {
-              <>
+              
               <VisaDetails html={detailsHtml} />
-              <MoreDetailsBlock href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing" />
-              </>
+              
              }
        />
     </>

@@ -9,5 +9,5 @@ alt: "Introduction to work visas picture"
 A work visa allows you to live and work in Australia. Here’s an overview.
 
 <div class="note">
-NOTE: The visas on this page is not a complete list of regional visas. Read More Details below for additional information.
+NOTE: The visas on this page is not a complete list of work visas. Read More Details below for additional information.
 </div>

@@ -1,0 +1,81 @@
+.wrapper {
+  background-color: #f9f9f9;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.link {
+  color: #00a5c3;
+  font-weight: 600;
+}
+
+.contentBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+}
+
+.logoContainer {
+  flex-shrink: 0;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 1.2;
+  color: #00a5c3;
+  font-weight: 550;
+  
+}
+
+.stars {
+  color: #00a5c3 !important;
+  font-size: 16px;
+  
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 767px) {
+  .contentBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logoContainer {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+}

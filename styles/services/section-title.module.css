@@ -1,0 +1,11 @@
+/* styles/common/section-title.module.css */
+.sectionTitle {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent); /* бирюзовый акцент */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: left;
+  background-color: var(--color-white);
+  padding-left: 45px;
+}

@@ -1,0 +1,93 @@
+.card {
+  background: #e6f7fb;
+  border-radius: 10px;
+  padding: 10px 10px 10px 20px; /* отступ для чекбокса */
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: var(--color-primary);
+}
+
+.leftBlock {
+  display: flex;
+  align-items: center; /* ❗ Выровнять по центру */
+  gap: 10px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #00a5c3;
+  background-color: white;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* Если хочешь нарисовать галочку внутри сразу: */
+.checkbox::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 10px;
+  border: solid #00a5c3;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin: 2px 5px;
+}
+
+.titlePriceBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+}
+
+.priceBlock {
+  text-align: right;
+}
+
+.priceRangeLabel {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.stars {
+  font-size: 18px;
+  color: #ffcc00;
+}
+
+.description {
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .priceBlock {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,58 @@
+.wrapper {
+  margin-bottom: 10px;
+}
+
+.titleButton {
+  display: block;
+  background-color: #ffa500;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+  margin-bottom: 10px;
+}
+
+.titleButton:hover {
+  background-color: #e68a00;
+  color: white;
+}
+
+.infoBlock {
+  background-color: #ffb84d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.icon {
+   padding-right: 5px;
+}
+
+.headerLeft, .headerCenter, .headerRight {
+  flex: 1;
+  text-align: center;
+}
+
+.headerLeft:hover, .headerCenter:hover, .headerRight:hover {
+    color:black;
+
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-top: 10px;
+  text-align: left;
+  padding: 0 15px;
+}

@@ -1,0 +1,41 @@
+/* styles/common/colored-button.module.css */
+.button {
+  display: inline-block;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  margin-bottom: 0;
+}
+
+.button:hover {
+  transform: scale(1.02);
+  color: white;
+}
+
+/* Цветовые стили */
+.orange {
+  background-color: #ff8c00;
+  color: white;
+}
+
+.orange:hover {
+  background-color: #e67e00;
+}
+
+.blue {
+  background-color: #00a5c3;
+  color: white;
+}
+
+.blue:hover {
+  background-color: #0088a5;
+}
+
+/* Дополнительно на всю ширину */
+.fullWidth {
+  width: 100%;
+}

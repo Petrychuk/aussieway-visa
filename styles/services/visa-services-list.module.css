@@ -1,0 +1,15 @@
+/* styles/services/visa-services-list.module.css */
+
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #00a5c3; /* Акцентный цвет, как в заголовке VISA SERVICES */
+}
+
+.servicesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
