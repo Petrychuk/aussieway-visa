@@ -8,6 +8,7 @@ import ColoredButton from '@/components/services/ColoredButton';
 import LegalServices from '@/components/services/LegalServices';
 import VisaConditionChanges from '@/components/services/VisaConditionChanges';
 import SkillsAssessment from '@/components/services/SkillsAssessment';
+import SubscribeBlock from '@/components/sections/SubscribeBlock';
 
 export default function OurServicePage({ intro }) {
   const visaServices = [
@@ -57,18 +58,18 @@ export default function OurServicePage({ intro }) {
           <>
            <EligibilityAssessment />
            <ColoredButton
-            text="Calculate Your Visa Points"
-            href="https://chatgpt.com/g/g-NwUP1JmJy-checkbox-calculator-for-visas-189-190-and-491"
-            color="blue"
-            fullWidth
-          />
+              text="Calculate Your Visa Points"
+              href="https://chatgpt.com/g/g-NwUP1JmJy-checkbox-calculator-for-visas-189-190-and-491"
+              color="blue"
+              fullWidth
+            />
            <LegalServices />
            <VisaConditionChanges />
-           <SkillsAssessment />
-          
+           <SkillsAssessment />          
           </>
         }
       />
+      <SubscribeBlock />
     </>
   );
 }

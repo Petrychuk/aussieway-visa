@@ -1,8 +1,7 @@
-.servicesLinks {
+.servicesLinksSection {
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 4px 12px var(--color-primary);
-  background-color: var(--color-secondary);
   width: 100%;
 }
 
@@ -11,22 +10,47 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
+
+/* Специально для страницы /book-consultation */
+.gridLine {
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* Центрируем 4 карточки */
+}
+
+.gridLine > * {
+  flex: 0 0 calc(25% - 8px); /* Каждая карточка занимает 25% ширины */
+  max-width: 25%;
+}
+
 /* Планшеты */
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .gridLine {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gridLine > * {
+    flex: unset;
+    max-width: unset;
   }
 }
 
 /* Смартфоны */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* ✅ 2 карточки в ряд */
+    grid-template-columns: repeat(2, 1fr);
     gap: 5px;
   }
-  .servicesLinks {
-    margin-top: 150px;
+
+  .gridLine {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
   }
 
+  .servicesLinksSection {
+    margin-top: 150px;
+  }
 }
-

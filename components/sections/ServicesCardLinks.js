@@ -1,11 +1,15 @@
 // components/sections/ServicesLinks.js
 import CardLink from '@/components/buttons/CardLink';
 import styles from '@/styles/layout/services-links.module.css';
+import { useRouter } from 'next/router';
 
 export default function ServicesLinks() {
+  const router = useRouter();
+  const isBookConsultationPage = router.pathname === '/book-consultation';
+
   return (
     <section className={styles.servicesLinksSection}>
-      <div className={styles.grid}>
+      <div className={`${styles.grid} ${isBookConsultationPage ? styles.gridLine : ''}`}>
         <CardLink
           title="Visa News"
           image="/img/buttons/visa_news_531x342.jpg"
@@ -23,10 +27,11 @@ export default function ServicesLinks() {
         />
         <CardLink
           title="Contact Us"
-          image="/img/buttons/contact_us_531x342.jpg"
+          image="/img/buttons/contact_us_2.png"
           href="/contact"
         />
       </div>
     </section>
   );
 }
+

@@ -16,13 +16,11 @@ export async function getStaticPaths() {
       },
     };
   });
-
   return {
     paths,
     fallback: false,
   };
 }
-
 export async function getStaticProps({ params: { slug } }) {
   const files = fs.readdirSync('content/posts');
 
@@ -31,7 +29,6 @@ export async function getStaticProps({ params: { slug } }) {
     const { data } = matter(fileContent);
     return data.url === slug || filename.replace('.md', '') === slug;
   });
-
   const markdownWithMeta = fs.readFileSync(
     path.join('content/posts', matchedFile),
     'utf-8'
