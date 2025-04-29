@@ -1,66 +1,66 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
+import { getSliderPosts, getSinglePost } from '@/lib/markdown';
+import ArticleTemplate from '@/components/articles/ArticleTemplate';
+import ArticleSidebar from '@/components/articles/ArticleSidebar';
+import Head from 'next/head'; // для метатегов
+import styles from '@/styles/pages/article-page.module.css';
+
 export async function getStaticPaths() {
-  const files = fs.readdirSync('content/posts');
-  const paths = files.map((filename) => {
-    const markdownWithMeta = fs.readFileSync(
-      path.join('content/posts', filename),
-      'utf-8'
-    );
-    const { data } = matter(markdownWithMeta);
-    return {
-      params: {
-        slug: data.url || filename.replace('.md', ''),
-      },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
+  const posts = await getSliderPosts();
+
+  const paths = posts.map((post) => ({
+    params: { slug: post.url },
+  }));
+
+  return { paths, fallback: false };
 }
+
 export async function getStaticProps({ params: { slug } }) {
-  const files = fs.readdirSync('content/posts');
+  const { frontmatter, contentHtml } = await getSinglePost(slug);
+  
+  const rawRecentPosts = await getSliderPosts();
+  
+  const recentPosts = rawRecentPosts.map((post) => ({
+  ...post,
+  date: typeof post.date === 'string'
+    ? post.date
+    : new Date(post.date).toISOString(),
+}));
 
-  const matchedFile = files.find((filename) => {
-    const fileContent = fs.readFileSync(path.join('content/posts', filename), 'utf-8');
-    const { data } = matter(fileContent);
-    return data.url === slug || filename.replace('.md', '') === slug;
-  });
-  const markdownWithMeta = fs.readFileSync(
-    path.join('content/posts', matchedFile),
-    'utf-8'
-  );
-
-  const { data, content } = matter(markdownWithMeta);
-
-   // ✅ Сериализуем дату
-  const frontmatter = {
-    ...data,
-    date: typeof data.date === 'string' ? data.date : new Date(data.date).toISOString(),
+  const authorData = {
+    name: 'Jane Smith',
+    image: '/img/blog-author.jpg',
+    bio: 'Passionate writer and tech enthusiast sharing ideas and stories.',
   };
 
   return {
     props: {
       frontmatter,
-      content,
+      contentHtml,
+      authorData,
+      recentPosts,
     },
   };
 }
 
-export default function ArticlePage({ frontmatter, content }) {
-  const { title, date, author, description, image, alt } = frontmatter;
+export default function SinglePost({ frontmatter, contentHtml, authorData, recentPosts }) {
+  const { title, description, keywords } = frontmatter;
 
   return (
-    <div className="container mt-5">
-      <h1>{title}</h1>
-      <p className="text-muted">{date} — {author}</p>
-      {image && <img src={image} alt={alt} className="img-fluid mb-4" />}
-      <p><em>{description}</em></p>
-      <ReactMarkdown>{content}</ReactMarkdown>
-    </div>
+    <>
+      {/* Мета-теги */}
+      <Head>
+        <title>{title}</title>
+        {description && <meta name="description" content={description} />}
+        {keywords && <meta name="keywords" content={keywords} />}
+      </Head>
+
+      {/* Контент */}
+      <main className={styles.main}>
+        <div className={styles.container}>
+          <ArticleTemplate frontmatter={frontmatter} contentHtml={contentHtml} />
+          <ArticleSidebar authorData={authorData} recentPosts={recentPosts} />
+        </div>
+      </main>
+    </>
   );
 }
-   

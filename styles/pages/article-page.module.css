@@ -1,0 +1,38 @@
+.main {
+  padding: 60px 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Article block: 75% */
+.container > :first-child {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+/* Sidebar block: 25% */
+.container > :last-child {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+/* 🔄 Mobile adaptation */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .container > :first-child,
+  .container > :last-child {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

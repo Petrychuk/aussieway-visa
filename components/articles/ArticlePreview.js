@@ -32,9 +32,8 @@ export default function ArticlePreview({ post }) {
 
         <hr className={styles.divider} />
 
-        <Link href={`/articles/${url}`} className={styles.readMore}>
-          <span>Read More</span>
-          <i className="bi bi-arrow-right"></i>
+        <Link href={`/articles/${post.url}`} className={styles.link}>
+        Read More →
         </Link>
       </div>
     </article>

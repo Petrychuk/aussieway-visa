@@ -1,0 +1,145 @@
+.sidebar {
+  background-color: #f9f9f9; /* опционально — фон */
+  border-radius: 8px;
+  padding: 20px;
+  position: sticky;
+  top: 100px; /* отступ от верха */
+  align-self: flex-start;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.recentPosts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.postItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--color-black);
+}
+
+.author {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.recentPosts h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.recentPosts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.recentPosts li {
+  margin-bottom: 15px;
+}
+
+.thumb {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.link {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.link:hover {
+  color: #0070f3;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  .author {
+    margin-bottom: 30px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .bio {
+    font-size: 0.9rem;
+  }
+
+  .recentPosts h4 {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .recentPosts li {
+    text-align: center;
+  }
+
+  .link {
+    font-size: 0.95rem;
+  }
+
+  .date {
+    font-size: 0.75rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Для сайдбара — задержка появления */
+.fadeInDelay {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+
+
