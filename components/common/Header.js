@@ -47,7 +47,13 @@ export default function Header() {
                 className={styles.logoImg}
                 sizes="(max-width: 768px) 90px, 130px"
               />
-              <img src="/img/decor/1003441.svg" alt="" className={styles.trailDecor} />
+              <Image
+              src="/img/decor/1003441.svg"
+              alt=""
+              width={190}
+              height={90}
+              className={styles.trailDecor}
+            />
             </div>
           </Link>
         </div>

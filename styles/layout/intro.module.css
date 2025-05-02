@@ -96,13 +96,15 @@
     margin-top: 0;
     margin-right: 0;
     font-size: var(--font-size-h1-mobile);
+    padding-left: 0;
   }
 
   .subtitle {
     font-size: var(--font-size-h3-mobile);
-    margin: 8px 0 0 0;
-    padding-left: 0;
+    margin: 5px 0 0 0;
+    padding-left: 10px;
     border-radius: 5px;
+    width: 98%;
     
   }
 

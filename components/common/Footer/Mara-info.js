@@ -7,6 +7,7 @@ export default function MaraInfo() {
     <div className={styles.maraBlock}>
       <div className={styles.logoTextContainer}>
         <div className={styles.logoBlock}>
+          <Image src="/img/Logo/Logo_cropped.jpg" alt="VAO Logo" width={140} height={70} />
           <Image src="/img/Logo/MIA_Member_Blue_2.png" alt="MIA Logo" width={70} height={70} />
         </div>
         <div className={styles.maraText}>

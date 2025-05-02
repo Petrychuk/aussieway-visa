@@ -64,12 +64,6 @@ p, li {
   font-size: var(--font-size-text);
   letter-spacing: 0.1em;
 }
-.my-icon {
-  color: var(--color-primary);
-}
-.bi-headset {
-  font-size: 18px;
-}
 
 /*--------------------------------------------------------------
 # Responsive Typography
