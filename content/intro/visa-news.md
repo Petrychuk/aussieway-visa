@@ -1,5 +1,5 @@
 ---
-title: "Visa News and Updates "
+title: "Visa News and Updates"
 highlight: "Australia"
 subtitle: "Australian Visa News and Updates"
 image: "/img/buttons/visa_news_531x342.jpg"

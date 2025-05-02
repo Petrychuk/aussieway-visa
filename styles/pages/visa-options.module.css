@@ -1,0 +1,14 @@
+/* styles/pages/visa-options.module.css */
+.gridOverride {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ 2 карточки в ряд по умолчанию (мобильные) */
+  gap: 10px;
+}
+
+@media (min-width: 992px) {
+  .gridOverride {
+    grid-template-columns: repeat(4, 1fr); /* ✅ 4 карточки в ряд на десктопе */
+    gap: 10px;
+    
+  }
+}

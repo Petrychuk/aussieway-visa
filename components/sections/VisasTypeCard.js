@@ -44,10 +44,10 @@ const visaLinks = [
   },
 ];
 
-export default function VisasTypeCard() {
+export default function VisasTypeCard({ overrideClassName = '' }) {
   return (
     <section className={styles.typesVisaLinks}>
-      <div className={styles.grid}>
+      <div className={`${styles.grid} ${overrideClassName}`}>
         {visaLinks.map((link) => (
           <CardLink
             key={link.href}

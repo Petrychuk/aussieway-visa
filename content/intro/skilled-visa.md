@@ -1,5 +1,5 @@
 ---
-title: "Skilled Visas "
+title: "Skilled Visas"
 highlight: "Australia"
 subtitle: "Introduction To Skilled Visas"
 image: "/img/buttons/skilled_visa_531x342.jpg"
