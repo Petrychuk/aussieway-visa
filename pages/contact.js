@@ -5,12 +5,13 @@ import ServicesCardLinks from '@/components/sections/ServicesCardLinks';
 import ContactForm from '@/components/sections/ContactForm';
 import styles from '@/styles/layout/contact-form.module.css';
 import SubscribeBlock from '@/components/sections/SubscribeBlock'
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export default function ContactPage({ intro }) {
   return (
     <>
       <Intro {...intro} />
-
+      <Breadcrumbs />
       <TwoColumn
         left={
         <>

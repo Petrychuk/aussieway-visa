@@ -9,6 +9,7 @@ import LegalServices from '@/components/services/LegalServices';
 import VisaConditionChanges from '@/components/services/VisaConditionChanges';
 import SkillsAssessment from '@/components/services/SkillsAssessment';
 import SubscribeBlock from '@/components/sections/SubscribeBlock';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export default function OurServicePage({ intro }) {
   const visaServices = [
@@ -47,6 +48,7 @@ export default function OurServicePage({ intro }) {
   return (
     <>
       <Intro {...intro} />
+      <Breadcrumbs />
       <TwoColumn
         left={
         <>

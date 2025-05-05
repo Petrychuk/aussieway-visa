@@ -5,7 +5,7 @@ import Footer from '@/components/common/Footer/Footer';
 export default function Wrapper({ children }) {
   return (
     <>
-      <Header />
+      <Header /> 
       <main className="wrapper">{children}</main>
       <Footer /> 
     </>

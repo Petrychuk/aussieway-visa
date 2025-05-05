@@ -4,11 +4,13 @@ import { getIntroContent, getVisaDetails } from '@/lib/markdown';
 import VisasTypeCard from '@/components/sections/VisasTypeCard';
 import VisaDetails from '@/components/common/VisaDetails'; 
 import MoreDetailsBlock from '@/components/common/MoreDetailsBlock';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export default function BusinessVisasPage({ intro, detailsHtml }) {
   return (
     <>
       <Intro {...intro} />
+      <Breadcrumbs />
       <TwoColumn
         left={
             <>

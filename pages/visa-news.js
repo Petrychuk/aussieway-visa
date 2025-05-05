@@ -4,11 +4,13 @@ import { getIntroContent, getSliderPosts } from '@/lib/markdown';
 import HeroSlider from '@/components/sections/SliderHero';
 import SubscribeBlock from '@/components/sections/SubscribeBlock';
 import styles from '@/styles/pages/visa-news.module.css';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export default function VisaNewsPage({ intro, slides }) {
   return (
     <>
       <Intro {...intro} />
+      <Breadcrumbs />
       <HeroSlider slides={slides} />
       <SubscribeBlock />
 

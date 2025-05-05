@@ -5,11 +5,13 @@ import VisasTypeCard from '@/components/sections/VisasTypeCard';
 import VisaDetails from '@/components/common/VisaDetails'; 
 import MoreDetailsBlock from '@/components/common/MoreDetailsBlock';
 import StudyAustraliaBlock from '@/components/sections/StudyAustraliaBlock';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export default function StudentVisasPage({ intro, detailsHtml }) {
   return (
     <>
       <Intro {...intro} />
+      <Breadcrumbs />
       <TwoColumn
         left={
             <>

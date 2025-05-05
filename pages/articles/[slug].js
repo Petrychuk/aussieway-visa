@@ -3,6 +3,7 @@ import ArticleTemplate from '@/components/articles/ArticleTemplate';
 import ArticleSidebar from '@/components/articles/ArticleSidebar';
 import Head from 'next/head'; // для метатегов
 import styles from '@/styles/pages/article-page.module.css';
+import Breadcrumbs from '@/components/common/Breadcrumbs';
 
 export async function getStaticPaths() {
   const posts = await getSliderPosts();
@@ -56,6 +57,7 @@ export default function SinglePost({ frontmatter, contentHtml, authorData, recen
 
       {/* Контент */}
       <main className={styles.main}>
+        <Breadcrumbs />
         <div className={styles.container}>
           <ArticleTemplate frontmatter={frontmatter} contentHtml={contentHtml} />
           <ArticleSidebar authorData={authorData} recentPosts={recentPosts} />
